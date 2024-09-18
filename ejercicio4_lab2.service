@@ -1,0 +1,13 @@
+[Unit]
+Description=Servicio de Monitoreo de Cambios en Directorios
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/luis/Laboratorios_Plataformas/ejercicio4_lab2.sh
+WorkingDirectory=/home/luis/Laboratorios_Plataformas
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
